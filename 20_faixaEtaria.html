@@ -14,9 +14,34 @@
     */
 
     //ENTRADA
+    let criança = 0;
+    let jovem = 0;
+    let adulto = 0;
+    let adulto2 = 0;
+    let idoso = 0;
+
+    for( i = 1; i <= 10; i++){
+        const idade = Number(prompt(`informe a idade da ${i} pessoa.`));
+        if(idade <= 15){
+            criança++
+        }
+        else if(idade >= 16 && idade <= 30){
+            jovem++
+        }
+        else if(idade >= 31 && idade <= 45){
+            adulto++
+        }
+        else if(idade >= 46 && idade <= 60){
+            adulto2++
+        }
+        else if(idade >= 61)
+            idoso++
+    }
 
     
     //PROCESSAMENTO
+    document.write(`pessoas na faixa etária entre 0 e 15 anos : ${criança} <br> percentagem : ${(criança/10) * 100} <br> pessoas na faixa etária entre 16 e 30 anos : ${jovem} <br> percentagem : ${(jovem/10) * 100} <br>pessoas na faixa etária entre 31 e 45 anos : ${adulto} <br> percentagem : ${(adulto/10) * 100} <br> pessoas na faixa etária entre 46 e 60 anos : ${adulto2} <br> percentagem :${(adulto2/10) * 100} <br> pessoas na faixa etária maior que 60 anos : ${idoso} <br> percentagem :${(idoso/10) * 100} 
+    `)
     
     
     //SAÍDA

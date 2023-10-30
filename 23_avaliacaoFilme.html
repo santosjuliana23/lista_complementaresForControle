@@ -11,6 +11,18 @@
     */
 
     //ENTRADA
+    const quantdepessoas = Number(prompt(`ìnforme quantas pessoas assistiram o filme.`));
+    let regular = 0;
+    let bom = 0;
+    let idade = 0;
+
+    for( i = 1; i <= quantdepessoas; i++){
+        const idade = Number(prompt(`informe a idade da ${i} pessoa.`));
+        const avaliacao = Number(prompt(`informe se a ${i} pessoa achou o filme regular ou bom.`));
+        if(avaliacao == "bom"){
+            bom++
+        }
+    }
 
     
     //PROCESSAMENTO
