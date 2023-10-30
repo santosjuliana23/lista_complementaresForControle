@@ -5,12 +5,17 @@
     */
 
     //ENTRADA
+const numero = Number(prompt(`Informe o número que deseja saber a tabuada.`));
+const tabuada = [];
 
-    
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
+//PROCESSAMENTO
+for (let i = 1; i <= 9; i++) {
+    const resultado = numero * i;
+    tabuada.push(` ${i} x ${numero} = ${resultado}`);
+}
+
+//SAÍDA
+document.write(tabuada.join("<br>"));
+
 
 </script>

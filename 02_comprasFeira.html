@@ -14,12 +14,23 @@
     Após o usuário informar a quantia vendida para cada item, calcule e apresente o faturamento do feirante.
     */
 
-    //ENTRADA
-    let nomes = ["tomate", "batata", "batatadoce", "alface", "cebola", "cebolinha", "beterraba"]
-    let preços = ["3.90", "3,40", "4.70", "1.50", "2.90", "1.40", "4.10"]
-    
-    //PROCESSAMENTO
-    
-    //SAÍDA
-    
+//ENTRADA
+const nomes = ["tomate", "batata", "batatadoce", "alface", "cebola", "cebolinha", "beterraba"];
+const preços = [3.90, 3.40, 4.70, 1.50, 2.90, 1.40, 4.10];
+let vendido = [];
+let faturamentototal = 0;
+
+//PROCESSAMENTO
+for (let i = 0; i < nomes.length; i++) {
+    const qntvendida = Number(prompt(`Informe a quantidade vendida de ${nomes[i]}.`));
+    vendido.push(qntvendida);
+    const valorvend = qntvendida * preços[i];
+    faturamentototal += valorvend;
+}
+
+//SAÍDA
+document.write(`Faturamento total: R$ ${faturamentototal.toFixed(2)}`);
+
+
+
 </script>
