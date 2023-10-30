@@ -8,10 +8,30 @@
     - Média do peso de todas as pessoas
     */
 
-    //ENTRADA
+    //ENTRADA   
+    let pesototal = 0;
+    let pesomaisde50 = 0;
+    let pesomenosde25 = 0;
+    let menosde25 = 0;
+    let maisde50 = 0;
+
+    for(i = 1; i <= 10; i++){
+        const idade = Number(prompt(`informe a idade da ${i} pessoa.`));
+        const peso = Number(prompt(`informe o peso da ${i} pessoa.`));
+        pesototal+= peso;
+        if(idade <= 25){
+            pesomenosde25 += peso;
+            menosde25++
+        }
+        else if(idade >= 50){
+            pesomaisde50 += peso;
+            maisde50++
+        }
+    }
 
     
     //PROCESSAMENTO
+    document.write(`média do peso de todas as pessoas : ${pesototal/10} <br> média do peso das pessoas com idade abaixo de 25 anos : ${pesomenosde25/menosde25} <br> média do peso das pessoas com a idade acima de 50 anos : ${pesomaisde50/maisde50}`)
     
     
     //SAÍDA

@@ -15,17 +15,25 @@
     let regular = 0;
     let bom = 0;
     let idade = 0;
-
+    let idadebom = 0;
+    let idaderegular = 0;
     for( i = 1; i <= quantdepessoas; i++){
-        const idade = Number(prompt(`informe a idade da ${i} pessoa.`));
-        const avaliacao = Number(prompt(`informe se a ${i} pessoa achou o filme regular ou bom.`));
-        if(avaliacao == "bom"){
+        const idade1 = Number(prompt(`informe a idade da ${i} pessoa.`));
+        const avaliacao = prompt(`informe se a ${i} pessoa achou o filme regular ou bom.`).toLowerCase();
+        idade+= idade1
+        if(avaliacao.toLowerCase() == "bom"){
             bom++
+            idadebom += idade1
+        }
+        else if(avaliacao.toLowerCase() == "regular"){
+            regular++
+            idaderegular += idade1
         }
     }
 
     
     //PROCESSAMENTO
+    document.write(`média de idade das pessoas que acharam o filme regular : ${Math.round(idaderegular/regular)} <br> percentual : ${Math.round((regular / quantdepessoas) * 100)} <br> média de idade das pessoas que acharam o filme bom : ${Math.round(idadebom/bom)} <br> percentual : ${Math.round((bom / quantdepessoas) * 100)} <br> média total de todas as pessoas : ${Math.round(idade/quantdepessoas)}`)
     
     
     //SAÍDA

@@ -11,12 +11,23 @@
     */
 
     //ENTRADA
+    const limiteinferior = Number(prompt(`informe o número limite inferior.`));
+    const limitesuperior = Number(prompt(`informe o número limite superior.`));
+    let pares = [];
+    let soma = 0;
 
     
     //PROCESSAMENTO
+    for( i = limiteinferior; i <= limitesuperior; i++){
+        if (i % 2 == 0) {
+            pares.push(i);
+            soma += i;
+        }
+    }
     
     
     //SAÍDA
+    document.write(`números pares entre ${limiteinferior} e ${limitesuperior} : ${pares} <br> soma : ${soma}`)
     
 
 </script>

@@ -8,12 +8,23 @@
     */
 
     //ENTRADA
+    let listaDeNumeros = [4, 8, 12, 35, 78, 83, 5, 22, 49, 95];
+    let abaixode50 = [];
+    let acimade50 = [];
 
     
     //PROCESSAMENTO
-    
+    for(numero of listaDeNumeros){
+        if(numero <= 50){
+            abaixode50.push(numero)
+        }
+        else if(numero > 50){
+            acimade50.push(numero)
+        }
+    }
     
     //SAÍDA
+    document.write(`lista de números abaixo de 50 : ${abaixode50} <br> percentual : ${(abaixode50.length/listaDeNumeros.length) * 100} <br> lista de números acima de 50 : ${acimade50} <br> percentual : ${(acimade50.length/listaDeNumeros.length) * 100}`)
     
 
 </script>
