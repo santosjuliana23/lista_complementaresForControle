@@ -9,18 +9,38 @@
     - Número de mulheres que respondeu sim
     - Percentual de homens que responderam não entre todos os homens analisados
     */
+// ENTRADA
+let pessoassim = 0;
+let pessoasnao = 0;
+let mulheressim = 0;
+let homensnao = 0;
 
-    //ENTRADA
+// PROCESSAMENTO
+for (let i = 1; i <= 10; i++) {
+    const genero = prompt(`Informe o gênero da ${i}ª pessoa (M-Masculino ou F-Feminino).`).toUpperCase();
+    const expec = prompt(`Informe se o produto atendeu às suas expectativas (S-Sim ou N-Não).`).toUpperCase();
 
+    if (expec === "S") {
+        pessoassim++;
+    } else if (expec === "N") {
+        pessoasnao++;
+    }
 
-    //PROCESSAMENTO
-    //ENTRADA
+    if (genero === "F" && expec === "S") {
+        mulheressim++;
+    }
 
-    
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
+    if (genero === "M" && expec === "N") {
+        homensnao++;
+    }
+}
+
+// SAÍDA
+document.write(`Número de pessoas que responderam sim = ${pessoassim} <br>`);
+document.write(`Número de pessoas que responderam não = ${pessoasnao} <br>`);
+document.write(`Número de mulheres que responderam sim = ${mulheressim} <br>`);
+document.write(`Percentual de homens que responderam não entre todos os homens analisados = ${(homensnao / (10 - mulheressim)) * 100}%`);
+
     
 
 </script>
