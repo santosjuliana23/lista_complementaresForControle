@@ -4,16 +4,20 @@
     Desenvolva um programa que gere números entre 1000 e 1999, demonstrando os números que, divididos por 11, dão resto 5.
     */
 
-    //ENTRADA
-
 
     //ENTRADA
-
+    let numeros = [];
     
     //PROCESSAMENTO
+    for(i = 1000; i <= 1999; i++){
+        if(i%11 == 5){
+            numeros.push(i)
+        }
+    }
     
     
     //SAÍDA
+    document.write(`${numeros}`)
     
 
 </script>

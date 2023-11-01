@@ -8,13 +8,41 @@
     */
 
     //ENTRADA
-    
-    
+    const quantiaInvestida = 100;
+    const rendimentoMensal = 0.018;
+    let total24 = 0;
+    let total48 = 0;
+    let total96 = 0;
+    let rendimento24 = 0;
+    let rendimento48 = 0;
+    let rendimento96 = 0;
 
-    
     //PROCESSAMENTO
+    for (let i = 1; i <= 24; i++) {
+        total24 += quantiaInvestida;
+        rendimento24 += total24 * rendimentoMensal;
+    }
     
-    
+    for (let i = 1; i <= 48; i++) {
+        total48 += quantiaInvestida;
+        rendimento48 += total48 * rendimentoMensal;
+    }
+
+    for (let i = 1; i <= 96; i++) {
+        total96 += quantiaInvestida;
+        rendimento96 += total96 * rendimentoMensal;
+    }
+
     //SAÍDA
-    
+    document.write(`Total investido em 24 meses: R$ ${total24.toFixed(2)}<br>`);
+    document.write(`Rendimento em 24 meses: R$ ${rendimento24.toFixed(2)}<br><br>`);
+    document.write(`Total investido em 48 meses: R$ ${total48.toFixed(2)}<br>`);
+    document.write(`Rendimento em 48 meses: R$ ${rendimento48.toFixed(2)}<br><br>`);
+    document.write(`Total investido em 96 meses: R$ ${total96.toFixed(2)}<br>`);
+    document.write(`Rendimento em 96 meses: R$ ${rendimento96.toFixed(2)}<br>`);
 </script>
+
+
+
+
+

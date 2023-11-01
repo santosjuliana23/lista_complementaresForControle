@@ -8,12 +8,17 @@
     */
 
     //ENTRADA
-
+    const qntpessoas = Number(prompt(`informe a quantidade de pessoas que terão sua medida informada.`));
+    let alturas = [];
     
     //PROCESSAMENTO
+    for(i = 1; i <= qntpessoas; i++){
+        const altura = Number(prompt(`informe a altura da ${i} pessoa.`));
+        alturas.push(altura)
+    }
     
     
     //SAÍDA
     
-
+    document.write(` menor altura = ${Math.min(...alturas)} <br> maior altura = ${Math.max(...alturas)}`)
 </script>

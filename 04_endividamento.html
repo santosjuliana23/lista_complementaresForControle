@@ -7,12 +7,23 @@
     */
 
     //ENTRADA
-
+    let quantiabanco = 10000;
+    let rendimento = 0.03;
+    let quantiatirada = 300;
+    let meses = 0;
     
     //PROCESSAMENTO
+    for(i = 1; i <= quantiabanco; i++){
+       while(quantiabanco>0){
+        quantiabanco -= quantiatirada;
+        quantiabanco += quantiabanco * rendimento; 
+       meses++
+       }
+    }
     
     
     //SAÍDA
+    document.write(`${meses}`)
     
 
 </script>
